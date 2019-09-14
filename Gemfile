@@ -12,6 +12,7 @@ gem 'rails'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'pg'
 
 group :development, :test do
   gem 'database_cleaner'
@@ -20,7 +21,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'sqlite3'
   gem 'nyan-cat-formatter'
   gem 'guard-rspec'
 end
@@ -40,10 +40,6 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'shoulda-matchers'
-end
-
-group :production do
-  gem 'pg', '0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
