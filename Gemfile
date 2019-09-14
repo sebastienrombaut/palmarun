@@ -20,7 +20,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'database_cleaner'
   gem 'sqlite3'
 end
 
@@ -32,6 +31,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'web-console'
+  gem 'rubocop-rails'
 end
 
 group :test do
