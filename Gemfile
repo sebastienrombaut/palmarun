@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'sqlite3'
+  gem 'nyan-cat-formatter'
 end
 
 group :development do
