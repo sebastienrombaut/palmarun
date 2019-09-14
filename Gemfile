@@ -40,6 +40,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'shoulda-matchers'
+  gem "rspec_junit_formatter"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
