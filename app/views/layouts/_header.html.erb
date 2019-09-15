@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+    <ul class="nav navbar navbar-logo mx-auto">
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <%= image_tag("logo_palmarun_temporaire.png", class: "logo")%>
+      <% end %>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        <% if user_signed_in? %>
+          <li class="nav-item p-sm-4 p-1">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'header' %>
+          </li>
+        <% else %>
+          <li class="nav-item p-sm-4 p-1">
+            <%= link_to "S'inscrire", new_user_registration_path, class: 'header' %>
+          </li>
+          <li class="nav-item p-sm-4 p-1">
+            <%= link_to "Se connecter", new_user_session_path, class: 'header' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
