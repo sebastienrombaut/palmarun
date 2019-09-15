@@ -8,8 +8,17 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
-  height: 80px;
-  margin:auto;
+header {
+  .logo {
+    height: 80px;
+    margin:auto;
+  }
+
+  a {
+    color: black;
+  }
 }
+
+
+
 
