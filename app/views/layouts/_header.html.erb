@@ -1,12 +1,15 @@
 <header>
   <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
-    <ul class="nav navbar navbar-logo mx-auto">
-      <%= link_to root_path, class: 'navbar-brand' do %>
-        <%= image_tag("logo_palmarun_temporaire.png", class: "logo")%>
-      <% end %>
+    <ul class="nav navbar navbar-logo mx-auto text-center">
+      <li>
+        <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= image_tag("logo_palmarun_temporaire.png", class: "logo")%>
+        <% end %>
+        <p>Tes performances running au même endroit</p>
+      </li>
     </ul>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
