@@ -4,26 +4,26 @@ gem 'best_in_place', github: 'bernat/best_in_place'
 gem 'bootstrap', '>= 4.3.1'
 gem 'coffee-rails'
 gem 'devise', '>= 4.6.0'
-gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'devise-i18n'
 gem 'jbuilder'
 gem 'jquery-rails'
+gem 'pg'
 gem 'puma'
 gem 'rails'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
-gem 'pg'
 
 group :development, :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
+  gem 'guard-rspec'
+  gem 'nyan-cat-formatter'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'nyan-cat-formatter'
-  gem 'guard-rspec'
 end
 
 group :development do
@@ -40,6 +40,6 @@ end
 group :test do
   gem 'capybara'
   gem 'poltergeist'
-  gem 'shoulda-matchers'
   gem "rspec_junit_formatter"
+  gem 'shoulda-matchers'
 end
