@@ -4,7 +4,7 @@ class CreateRaces < ActiveRecord::Migration[5.2]
       t.string :name
       t.datetime :date
       t.float :distance
-      t.integer :height_difference
+      t.integer :height_difference, default: 0
 
       t.timestamps
     end

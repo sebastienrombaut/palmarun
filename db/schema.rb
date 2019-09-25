@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_09_21_134450) do
     t.string "name"
     t.datetime "date"
     t.float "distance"
-    t.integer "height_difference"
+    t.integer "height_difference", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
