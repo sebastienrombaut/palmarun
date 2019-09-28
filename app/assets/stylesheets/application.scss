@@ -4,8 +4,6 @@
 @import "bootstrap";
 @import "static_pages.scss";
 
-$blue-color: #3c8eaa;
-
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -23,10 +21,9 @@ header {
   navbar-toggler {
     color: white;
   }
-}
 
-.btn-bg-blue {
-  background-color: $blue-color;
-  font-size: 2rem;
+  p {
+    font-size: 0.7rem;
+  }
 }
 
