@@ -1,3 +1,7 @@
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    if current_user
+      @results = current_user.results
+    end
+  end
 end
