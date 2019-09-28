@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :result do
-    general_classification { "MyString" }
-    race_id { 1 }
-    user_id { 1 }
-    running_time { 1 }
+    general_classification { "1/20" }
+    running_time { 3600 }
+
+    race
+    user
   end
 end

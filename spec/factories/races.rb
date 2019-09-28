@@ -1,8 +1,10 @@
 FactoryBot.define do
+  sequence(:name) { |n| "Course n°#{n}" }
+
   factory :race do
-    name { "MyString" }
-    date { "2019-09-21 14:59:59" }
-    distance { 1.5 }
-    height_difference { 1 }
+    name
+    date { Time.now }
+    distance { 10 }
+    height_difference { 0 }
   end
 end
