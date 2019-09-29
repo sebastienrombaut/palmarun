@@ -1,2 +1,32 @@
-<h1>Results#new</h1>
-<p>Find me in app/views/results/new.html.erb</p>
+<p>Ajouter manuellement un resultat</p>
+<%= form_tag(results_path) do |f| %>
+  <% if @result.errors.any? %>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ul>
+        <% @result.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-12 py-3">
+      Nom de la course : <%= select_tag :race_name, options_for_select(@races_names)%></br>
+    </div>
+    <div class="col-12 py-3">
+      Temps : <%= text_field_tag :running_time %>
+    </div>
+    <div class="col-12 py-3">
+      Classement général : <%= text_field_tag :general_classification %>
+    </div>
+    <div class="col-12 py-3">
+      </br><%= submit_tag "Ajouter ce résultat", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
