@@ -1,10 +1,13 @@
-<p>Voici les critères de recherche possible :</p>
-<%= form_tag (results_path), method: :get do %>
-  Nom de course : <%= text_field_tag :name, params[:name] %>
-  Distance : <%= text_field_tag :distance, params[:distance] %>
-  Année : <%= text_field_tag :year, params[:year] %>
-  <%= submit_tag "Rechercher" %>
-<% end %>
+<div class="py-2">
+  <p>Voici les critères de recherche possible :</p>
+
+  <%= form_tag (results_path), method: :get do %>
+    Nom de course : <%= text_field_tag :name, params[:name] %>
+    Distance : <%= text_field_tag :distance, params[:distance] %>
+    Année : <%= text_field_tag :year, params[:year] %>
+    <%= submit_tag "Rechercher" %>
+  <% end %>
+</div>
 
 <% if @results.any? %>
   <p class="last-results-text my-3">Voici tous tes résultats filtrés :</p>
