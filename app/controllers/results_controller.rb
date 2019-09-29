@@ -1,6 +1,9 @@
 class ResultsController < ApplicationController
   def index
-    @results = current_user.results
+    @results = current_user.search_results(params)
+    p "========"
+    p params
+    p "============"
   end
 
   def new

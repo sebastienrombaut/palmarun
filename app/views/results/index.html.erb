@@ -1,2 +1,34 @@
-<h1>Results#index</h1>
-<p>Find me in app/views/results/index.html.erb</p>
+<%= form_tag (results_path), method: :get do %>
+  Nom de course : <%= text_field_tag :name, params[:name] %>
+  Distance : <%= text_field_tag :distance, params[:distance] %>
+  Année : <%= text_field_tag :year, params[:year] %>
+  <%= submit_tag "Rechercher" %>
+<% end %>
+
+<% if @results.any? %>
+  <p class="last-results-text my-3">Voici tous tes résultats filtrés :</p>
+  <table class="table table-responsive table-hover my-4">
+    <thead class="table-header">
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Course</th>
+        <th scope="col">Distance (en km)</th>
+        <th scope="col">D+</th>
+        <th scope="col">Temps</th>
+        <th scope="col">Classement Général</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @results.each do |result| %>
+        <tr>
+          <th scope="row"><%= result.race.date.strftime("%d/%m/%y") %></th>
+          <th scope="row"><%= result.race.name %></th>
+          <th scope="row"><%= result.race.distance %></th>
+          <th scope="row"><%= result.race.height_difference %></th>
+          <th scope="row"><%= Time.at(result.running_time).utc.strftime("%H:%M:%S") %></th>
+          <th scope="row"><%= result.general_classification %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -5,7 +5,9 @@
     <%= link_to new_result_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
       <button type="button" class="btn btn-bg-blue text-white">AJOUTER UN RESULTAT</button>
     <% end %>
-      <button type="button" class="btn btn-bg-blue text-white col-10 offset-1 col-md-4 offset-md-2 my-3">CONSULTER MES RESULTATS</button>
+    <%= link_to results_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
+      <button type="button" class="btn btn-bg-blue text-white">CONSULTER MES RESULTATS</button>
+    <% end %>
   </div>
 
   <% if @results.any? %>
