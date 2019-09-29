@@ -14,7 +14,7 @@ class User < ApplicationRecord
   end
 
   def search_results(search_params)
-    results = self.results
+    results = self.results_order_by_races_date
 
     results = results.joins(:race).where(["races.name LIKE ?", "%#{search_params[:name]}%"]) if search_params[:name].present?
     results = results.joins(:race).where(["distance = ?", "#{search_params[:distance]}"]) if search_params[:distance].present?
