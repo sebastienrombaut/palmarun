@@ -2,9 +2,9 @@
   <p>Voici les critères de recherche possible :</p>
 
   <%= form_tag (results_path), method: :get do %>
-    Nom de course : <%= text_field_tag :name, params[:name] %>
-    Distance : <%= text_field_tag :distance, params[:distance] %>
-    Année : <%= text_field_tag :year, params[:year] %>
+    Nom de course : <%= text_field_tag :name, params[:name], placeholder: 'Ex : Paris-Versailles' %>
+    Distance : <%= text_field_tag :distance, params[:distance], placeholder: 'En km' %>
+    Année : <%= text_field_tag :year, params[:year], placeholder: 'Ex : 2019' %>
     <%= submit_tag "Rechercher" %>
   <% end %>
 </div>
