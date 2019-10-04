@@ -1,0 +1,35 @@
+<p>Ajoute une nouvelle course</p>
+<%= form_tag(races_path) do |f| %>
+  <% if @race.errors.any? %>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ul>
+        <% @race.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-12 py-3">
+      Nom de la course : <%= text_field_tag :name, nil, placeholder: 'Ex : Paris-Versailles' %>
+    </div>
+    <div class="col-12 py-3">
+      Date : <%= date_field_tag :date %>
+    </div>
+    <div class="col-12 py-3">
+      Distance (en km) : <%= text_field_tag :distance, nil, placeholder: 'Ex : 10.5' %>
+    </div>
+    <div class="col-12 py-3">
+      Dénivelé (en m) : <%= text_field_tag :height_difference, nil, placeholder: 'Ex : 2250' %>
+    </div>
+    <div class="col-12 py-3">
+      </br><%= submit_tag "Ajouter cette course", class: "btn btn-primary normal-btn text-white" %>
+    </div>
+  </div>
+<% end %>

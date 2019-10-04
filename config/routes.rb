@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :results
+
+  resources :races, only: [:new, :create]
 end
