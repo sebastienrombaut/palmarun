@@ -8,7 +8,7 @@ class RacesController < ApplicationController
 
     if @race.save
       flash[:success] = "La course a bien été crée !"
-      redirect_to root_path
+      redirect_to new_result_path
     else
       flash[:danger] = "Le course n'a pas été crée"
       redirect_to new_race_path
