@@ -14,6 +14,7 @@ gem 'rails'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'database_cleaner'
