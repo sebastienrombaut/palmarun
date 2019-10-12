@@ -21,22 +21,24 @@
           <th scope="col">D+ (en m)</th>
           <th scope="col">Temps</th>
           <th scope="col">Classement Général</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
         <% @results.each do |result| %>
           <tr>
-            <th scope="row"><%= result.race.date.strftime("%d/%m/%y") %></th>
-            <th scope="row"><%= result.race.name %></th>
-            <th scope="row"><%= result.race.distance %></th>
-            <th scope="row"><%= result.race.height_difference %></th>
-            <th scope="row"><%= Time.at(result.running_time).utc.strftime("%H:%M:%S") %></th>
-            <th scope="row"><%= result.general_classification %></th>
+            <td scope="row"><%= result.race.date.strftime("%d/%m/%y") %></td>
+            <td scope="row"><%= result.race.name %></td>
+            <td scope="row"><%= result.race.distance %></td>
+            <td scope="row"><%= result.race.height_difference %></td>
+            <td scope="row"><%= Time.at(result.running_time).utc.strftime("%H:%M:%S") %></td>
+            <td scope="row"><%= result.general_classification %></td>
+            <td scope="row"><i class="fas fa-plus" data-toggle="tooltip" data-placement="top" title="Add new match" id='icon_league3'></i></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   <% end %>
 <% else %>
-  <h4 class="text-center py-4">Bienvenu sur Palmarun, vous pouvez vous créer un compte ou vous connecter :-)</h4>
+  <h4 class="text-center py-4">Bienvenue sur Palmarun ! Pour démarrer, tu peux créer un compte ou te connecter.</h4>
 <% end %>
