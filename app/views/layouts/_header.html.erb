@@ -17,7 +17,7 @@
       <ul class="navbar-nav ml-auto text-center">
         <% if user_signed_in? %>
           <li class="nav-item p-sm-4 p-1">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'header' %>
+            <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: 'header' %>
           </li>
         <% else %>
           <li class="nav-item p-sm-4 p-1">
