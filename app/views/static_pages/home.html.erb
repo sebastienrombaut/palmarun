@@ -1,5 +1,5 @@
 <% if current_user %>
-  <h1 class="text-center py-4">Bienvenu sur Palmarun <%= current_user.first_name %></h1>
+  <h3 class="text-center py-4">A toi de jouer <%= current_user.first_name %></h3>
 
   <div class="row">
     <%= link_to new_result_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
@@ -41,4 +41,12 @@
   <% end %>
 <% else %>
   <h4 class="text-center py-4">Bienvenue sur Palmarun ! Pour démarrer, tu peux créer un compte ou te connecter.</h4>
+  <div class="row">
+    <%= link_to new_user_registration_path, class: "col-10 offset-1 col-md-4 offset-md-2 my-3" do %>
+      <button type="button" class="btn btn-bg-blue text-white">S'inscrire</button>
+    <% end %>
+    <%= link_to new_user_session_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
+      <button type="button" class="btn btn-bg-blue text-white">Se connecter</button>
+    <% end %>
+  </div>
 <% end %>

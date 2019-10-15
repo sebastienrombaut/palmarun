@@ -17,7 +17,7 @@
 
   <div class="row">
     <div class="col-12 py-3">
-      Nom de la course : <%= select_tag :race_name, options_for_select(@races_names)%> Ta course n'existe pas ? Ajoute là !
+      Nom de la course : <%= select_tag :race_name, options_for_select(@races_names)%> Ta course n'existe pas ? Ajoute-la !
       <%= link_to new_race_path, class: "mx-1" do %>
         <button type="button" class="btn btn-primary normal-btn text-white">Créer une course</button>
       <% end %>
