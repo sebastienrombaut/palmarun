@@ -2,3 +2,11 @@
   background-color: $blue-color;
   font-size: 1rem;
 }
+
+@media screen and (min-width: 600px)  {
+  .mobile-break { display: none; }
+}
+
+.small_text_field {
+  width: 100px;
+}

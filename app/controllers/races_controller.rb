@@ -7,10 +7,10 @@ class RacesController < ApplicationController
     @race = Race.new(race_params)
 
     if @race.save
-      flash[:success] = "La course a bien été crée !"
+      flash[:success] = "La course a bien été créée !"
       redirect_to new_result_path
     else
-      flash[:danger] = "Le course n'a pas été crée"
+      flash[:danger] = "Le course n'a pas été créée"
       redirect_to new_race_path
     end
   end

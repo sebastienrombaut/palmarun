@@ -1,4 +1,4 @@
-<p>Ajouter manuellement un resultat</p>
+<p>Ajouter manuellement un résultat</p>
 <%= form_tag(results_path) do |f| %>
   <% if @result.errors.any? %>
     <div class="alert alert-danger">
@@ -17,9 +17,9 @@
 
   <div class="row">
     <div class="col-12 py-3">
-      Nom de la course : <%= select_tag :race_name, options_for_select(@races_names)%> Ta course n'existe pas ? Ajoute-la !
+      Nom de la course : <%= select_tag :race_name, options_for_select(@races_names)%><br /><br /> Ta course n'existe pas ? Ajoute-la !
       <%= link_to new_race_path, class: "mx-1" do %>
-        <button type="button" class="btn btn-primary normal-btn text-white">Créer une course</button>
+        <button type="button" class="btn btn-primary normal-btn text-white">Ajouter une course</button>
       <% end %>
     </div>
     <div class="col-12 py-3">

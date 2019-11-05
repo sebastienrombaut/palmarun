@@ -3,10 +3,10 @@
 
   <div class="row">
     <%= link_to new_result_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
-      <button type="button" class="btn btn-bg-blue text-white">AJOUTER UN RESULTAT</button>
+      <button type="button" class="btn btn-bg-blue text-white">AJOUTER UN RÉSULTAT</button>
     <% end %>
     <%= link_to results_path, class: "col-10 offset-1 col-md-4 offset-md-1 my-3" do %>
-      <button type="button" class="btn btn-bg-blue text-white">CONSULTER MES RESULTATS</button>
+      <button type="button" class="btn btn-bg-blue text-white">CONSULTER MES RÉSULTATS</button>
     <% end %>
   </div>
 
@@ -17,8 +17,8 @@
         <tr>
           <th scope="col">Date</th>
           <th scope="col">Course</th>
-          <th scope="col">Distance (en km)</th>
-          <th scope="col">D+ (en m)</th>
+          <th scope="col">Distance (km)</th>
+          <th scope="col">D+ (m)</th>
           <th scope="col">Temps</th>
           <th scope="col">Classement Général</th>
           <th scope="col"></th>
@@ -33,7 +33,7 @@
             <td scope="row"><%= result.race.height_difference %></td>
             <td scope="row"><%= Time.at(result.running_time).utc.strftime("%H:%M:%S") %></td>
             <td scope="row"><%= result.general_classification %></td>
-            <td scope="row"><i class="fas fa-plus" data-toggle="tooltip" data-placement="top" title="Add new match" id='icon_league3'></i></td>
+            <td scope="row"><i class="fas fa-plus" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id=''></i></td>
           </tr>
         <% end %>
       </tbody>
