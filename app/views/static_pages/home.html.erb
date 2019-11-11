@@ -27,7 +27,7 @@
       <tbody>
         <% @results.each do |result| %>
           <tr>
-            <td scope="row"><%= result.race.date.strftime("%d/%m/%y") %></td>
+            <td scope="row"><%= result.date.strftime("%d/%m/%y") %></td>
             <td scope="row"><%= result.race.name %></td>
             <td scope="row"><%= result.race.distance %></td>
             <td scope="row"><%= result.race.height_difference %></td>

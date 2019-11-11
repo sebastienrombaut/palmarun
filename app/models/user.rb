@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :races, through: :results
 
   def results_order_by_races_date
-    self.results.joins(:race).order("races.date DESC")
+    self.results.order("date DESC")
   end
 
   def search_results(search_params)
@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
     results = results.joins(:race).where(["races.name LIKE ?", "%#{search_params[:name]}%"]) if search_params[:name].present?
     results = results.joins(:race).where(["distance = ?", "#{search_params[:distance]}"]) if search_params[:distance].present?
-    results = results.joins(:race).where(["date_part('year', date) = ?", "#{search_params[:year]}"]) if search_params[:year].present?
+    results = results.where(["date_part('year', date) = ?", "#{search_params[:year]}"]) if search_params[:year].present?
 
     return results
   end

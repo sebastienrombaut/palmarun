@@ -14,6 +14,7 @@ class ResultsController < ApplicationController
     @result.race_id = Race.find_by(name: params[:race_name]).id
     @result.user_id = current_user.id
     @result.general_classification = params[:general_classification]
+    @result.date = params[:date]
 
     if @result.save
       flash[:success] = "Le résultat a bien été crée !"
@@ -38,6 +39,7 @@ class ResultsController < ApplicationController
       :user_id,
       :general_classification,
       :running_time,
+      :date,
     )
   end
 

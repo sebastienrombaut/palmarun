@@ -20,7 +20,6 @@ class RacesController < ApplicationController
   def race_params
     params.permit(
       :name,
-      :date,
       :distance,
       :height_difference,
     )
