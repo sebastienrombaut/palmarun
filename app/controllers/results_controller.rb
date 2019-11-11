@@ -17,7 +17,7 @@ class ResultsController < ApplicationController
     @result.date = params[:date]
 
     if @result.save
-      flash[:success] = "Le résultat a bien été crée !"
+      flash[:success] = "Le résultat a bien été créé !"
       redirect_to root_path
     else
       flash[:danger] = "Le résultat n'a pas été crée"
