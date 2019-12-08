@@ -35,7 +35,10 @@
             <td scope="row"><%= result.general_classification %></td>
             <td scope="row">
               <%= link_to edit_result_path(result) do %>
-                <i class="fas fa-edit" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id="edit-icon"></i></td>
+                <i class="fas fa-edit" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id="edit-icon"></i>
+              <% end %>
+              <%= link_to result_path(result), method: :delete, data: {confirm: "Êtes-vous sûr(e) de vouloir supprimer ce résultat ?"} do %>
+                <i class="fas fa-trash" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id="edit-icon"></i></td>
               <% end %>
           </tr>
         <% end %>
