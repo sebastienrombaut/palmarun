@@ -33,7 +33,10 @@
             <td scope="row"><%= result.race.height_difference %></td>
             <td scope="row"><%= Time.at(result.running_time).utc.strftime("%H:%M:%S") %></td>
             <td scope="row"><%= result.general_classification %></td>
-            <td scope="row"><i class="fas fa-plus" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id=''></i></td>
+            <td scope="row">
+              <%= link_to edit_result_path(result) do %>
+                <i class="fas fa-edit" data-toggle="tooltip" data-placement="top" title="Editer le résultat" id="edit-icon"></i></td>
+              <% end %>
           </tr>
         <% end %>
       </tbody>

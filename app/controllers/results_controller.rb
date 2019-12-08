@@ -25,6 +25,24 @@ class ResultsController < ApplicationController
     end
   end
 
+  def edit
+    @result = Result.find(params[:id])
+    @races_names = Race.all.map { |r| r.name }
+  end
+
+  def update
+    @result = Result.find(params[:id])
+    convert_running_time_from_user_input(result_params[:running_time])
+
+    if @result.update(result_params)
+      flash[:success] = "Le résultat a bien été édité !"
+      redirect_to root_path
+    else
+      flash[:danger] = "Le résultat n'a pas été édité"
+      redirect_to root_path
+    end
+  end
+
   def show
   end
 
@@ -45,5 +63,9 @@ class ResultsController < ApplicationController
 
   def convert_time_input_into_seconds_integer(string)
     string.split(':').map { |a| a.to_i }.inject(0) { |a, b| a * 60 + b}
+  end
+
+  def convert_running_time_from_user_input(string)
+    params[:result][:running_time] = convert_time_input_into_seconds_integer(string)
   end
 end

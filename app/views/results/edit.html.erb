@@ -1,0 +1,20 @@
+<div class='container'>
+  <h2>Éditer le résultat de <%= @result.race.name %></h2>
+    <%= form_tag @result, :method => :patch do |f|%>
+      <div class="row">
+        <div class="col-12 py-3">
+          Date : <%= date_field_tag "result[date]" %>
+        </div>
+        <div class="col-12 py-3">
+          Temps : <%= text_field_tag "result[running_time]", nil, placeholder: 'Format : HH:MM:SS' %>
+        </div>
+        <div class="col-12 py-3">
+          Classement général : <%= text_field_tag "result[general_classification]", nil, placeholder: 'Ex : 12/1500' %>
+        </div>
+        <div class="col-12 py-3">
+          <%= submit_tag "Éditer ce résultat", class: "btn btn-primary normal-btn text-white my-3" %>
+          <%= link_to "Annuler", root_path, class: "btn btn-primary normal-btn text-white" %>
+        </div>
+      </div>
+    <% end %>
+</div>
